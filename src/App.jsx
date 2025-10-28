@@ -16,16 +16,6 @@ const App = () => {
       <ConnectionProvider endpoint={"https://api.devnet.solana.com"}>
         <WalletProvider wallets={[]} autoConnect>
           <WalletModalProvider>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                padding: 20,
-              }}
-            >
-              <WalletMultiButton />
-              <WalletDisconnectButton />
-            </div>
             <TokenLaunchpad></TokenLaunchpad>
           </WalletModalProvider>
         </WalletProvider>
