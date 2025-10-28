@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CustomInput from "./CustomInput";
 import { formFields } from "../constants/tokeFields";
+import { createMint } from "@solana/spl-token";
 
 const TokenLaunchpad = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +44,7 @@ const TokenLaunchpad = () => {
     console.log("Symbol:", symbolOfToken);
     console.log("Supply:", supplyOfToken);
     console.log("Image URL:", imageOfToken);
+    createMint();
     if (validateForm()) {
       alert("✅ Token Created Successfully!");
       console.log("Form Data:", formData);
